@@ -6,14 +6,17 @@ import clearModule from 'clear-module';
 import stripAnsi from 'strip-ansi';
 import BigText from '../source/index.js';
 
+// eslint-disable-next-line @typescript-eslint/no-unsafe-call
 test('render', t => {
-	// TODO: Find out why this doesn't work to prevent color
 	process.env.FORCE_COLOR = '0';
+	// eslint-disable-next-line @typescript-eslint/no-unsafe-call
 	clearModule.all();
-	// Const BigText = require('.');
 
+	// eslint-disable-next-line @typescript-eslint/no-unsafe-assignment, @typescript-eslint/no-unsafe-call
 	const {lastFrame} = render(<BigText text='unicorns'/>);
+	// eslint-disable-next-line @typescript-eslint/no-unsafe-call
 	console.log(lastFrame());
+	// eslint-disable-next-line @typescript-eslint/no-unsafe-call
 	t.snapshot(stripAnsi(lastFrame()));
 
 	delete process.env.FORCE_COLOR;

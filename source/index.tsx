@@ -4,30 +4,30 @@ import CFonts from 'cfonts';
 
 export type CFontProps = {
 	font:
-	| 'block'
-	| 'slick'
-	| 'tiny'
-	| 'grid'
-	| 'pallet'
-	| 'shade'
-	| 'simple'
-	| 'simpleBlock'
-	| '3d'
-	| 'simple3d'
-	| 'chrome'
-	| 'huge';
+		| 'block'
+		| 'slick'
+		| 'tiny'
+		| 'grid'
+		| 'pallet'
+		| 'shade'
+		| 'simple'
+		| 'simpleBlock'
+		| '3d'
+		| 'simple3d'
+		| 'chrome'
+		| 'huge';
 	align: 'left' | 'center' | 'right';
 	colors: string[];
 	backgroundColor:
-	| 'transparent'
-	| 'black'
-	| 'red'
-	| 'green'
-	| 'yellow'
-	| 'blue'
-	| 'magenta'
-	| 'cyan'
-	| 'white';
+		| 'transparent'
+		| 'black'
+		| 'red'
+		| 'green'
+		| 'yellow'
+		| 'blue'
+		| 'magenta'
+		| 'cyan'
+		| 'white';
 	letterSpacing: number;
 	lineHeight: number;
 	space: boolean;
@@ -47,9 +47,10 @@ const defaultCFontProps: CFontProps = {
 	maxLength: 0,
 };
 
-const BigText: React.FC<BigTextProps> = ({text, ...props}) => { // eslint-disable-line react/function-component-definition
+const BigText: React.FC<BigTextProps> = ({text, ...props}) => {
 	const cFontProps = {...defaultCFontProps, ...props};
-	return <Text>{CFonts.render(text, cFontProps).string}</Text>; // eslint-disable-line @typescript-eslint/no-unsafe-call
+	// eslint-disable-next-line @typescript-eslint/no-unsafe-call
+	return <Text>{CFonts.render(text, cFontProps).string}</Text>;
 };
 
 export default BigText;

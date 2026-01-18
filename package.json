@@ -16,7 +16,7 @@
 		"default": "./dist/index.js"
 	},
 	"engines": {
-		"node": ">=14.16"
+		"node": ">=18"
 	},
 	"scripts": {
 		"build": "tsc",
@@ -44,36 +44,32 @@
 		"command-line"
 	],
 	"dependencies": {
-		"cfonts": "^3.1.1",
+		"cfonts": "^3.3.1",
 		"prop-types": "^15.8.1"
 	},
 	"devDependencies": {
 		"@sindresorhus/tsconfig": "^3.0.1",
-		"@types/react": "^18.0.28",
-		"ava": "^5.2.0",
+		"@types/react": "^19.2.8",
+		"ava": "^6.4.1",
 		"clear-module": "^4.1.2",
-		"eslint-config-xo-react": "^0.27.0",
-		"eslint-plugin-react": "^7.32.2",
-		"eslint-plugin-react-hooks": "^4.6.0",
-		"ink": "^4.0.0",
-		"ink-testing-library": "^3.0.0",
-		"react": "^18.2.0",
+		"eslint": "^9.39.2",
+		"ink": "^6.6.0",
+		"ink-testing-library": "^4.0.0",
+		"react": "^19.2.3",
 		"strip-ansi": "^7.0.1",
 		"ts-node": "^10.9.1",
-		"typescript": "^5.0.2",
-		"xo": "^0.53.1"
+		"typescript": "^5.9.3",
+		"xo": "^1.2.3"
 	},
 	"peerDependencies": {
-		"ink": ">=4",
-		"react": ">=18"
+		"ink": ">=6",
+		"react": ">=19"
 	},
 	"xo": {
-		"extends": [
-			"xo-react"
-		],
 		"rules": {
 			"unicorn/filename-case": "off",
-			"@typescript-eslint/naming-convention": "off"
+			"@typescript-eslint/naming-convention": "off",
+			"no-warning-comments": "off"
 		}
 	},
 	"ava": {
